@@ -1,5 +1,6 @@
 package fop.w5dll;
 
 public class IntDoubleListElement {
-	// TODO
+    private int info;
+    public IntDoubleList next, prev;
 }
