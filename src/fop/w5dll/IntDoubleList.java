@@ -16,7 +16,17 @@ public class IntDoubleList {
 		return tail;
 	}
 
-//	public int append(int info){
-//
-//	}
+	public void append(int info){
+		if (tail != null) {
+			IntDoubleListElement element = new IntDoubleListElement(info);
+			element.prev = tail;
+			tail = element;
+			element.next = null;
+		}
+
+		else {
+			tail = new IntDoubleListElement(info);
+		}
+
+	}
 }
