@@ -9,11 +9,11 @@ public class IntDoubleList {
 	}
 
 	public IntDoubleListElement getFirstElement(){
-		return this.head;
+		return head;
 	}
 
 	public IntDoubleListElement getLastElement(){
-		return this.tail;
+		return tail;
 	}
 
 //	public int append(int info){
