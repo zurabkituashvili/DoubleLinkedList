@@ -12,6 +12,7 @@ public class IntDoubleList {
 		return head;
 	}
 
+
 	public IntDoubleListElement getLastElement(){
 		return tail;
 	}
