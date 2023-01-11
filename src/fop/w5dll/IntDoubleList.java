@@ -66,26 +66,33 @@ public class IntDoubleList {
             System.out.println("Position out of bounds");
             return;
         }
-        if (counter != pos){
+        while (counter != pos){
             counter++;
             current = current.next;
         }
-        if (counter == pos){
-            if (current == head && current == tail){
-                head = null;
-                tail = null;
-            }
-            if (current == head && current.next == tail){
-                head = tail;
-                tail.prev = null;
-            }
-            if (current == tail && current.prev == head){
-                tail = head;
-                head.next = null;
-            }
-            if (current.prev != null && current.next != null){
-
-            }
+        if (current == head && current == tail){
+            head = null;
+            tail = null;
+        }
+        if (current == head && current.next == tail){
+            head = tail;
+            tail.prev = null;
+        }
+        if (current == tail && current.prev == head){
+            tail = head;
+            head.next = null;
+        }
+        if (current.prev != null && current.next == null){
+            tail = current.prev;
+            tail.next = null;
+        }
+        if (current.next != null && current.prev == null){
+            head = current.next;
+            head.prev = null;
+        }
+        if (current.prev != null && current.next != null){
+            (current.next).prev = current.prev;
+            (current.prev).next = current.next;
         }
     }
 
