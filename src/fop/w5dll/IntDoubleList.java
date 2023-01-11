@@ -18,16 +18,16 @@ public class IntDoubleList {
 	}
 
 	public void append(int info){
+		IntDoubleListElement element = new IntDoubleListElement(info);
 		if (tail != null) {
-			IntDoubleListElement element = new IntDoubleListElement(info);
+			tail.next = element;
 			element.prev = tail;
 			tail = element;
 			element.next = null;
 		}
-
 		else {
-			tail = new IntDoubleListElement(info);
+			tail = element;
+			head = element;
 		}
-
 	}
 }
