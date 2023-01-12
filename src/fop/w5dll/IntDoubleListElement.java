@@ -17,4 +17,8 @@ public class IntDoubleListElement {
     public void setInfo(int info) {
         this.info = info;
     }
+
+    public boolean isEqual(IntDoubleListElement other){
+        return this.info == other.info;
+    }
 }

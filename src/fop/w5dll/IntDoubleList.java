@@ -112,4 +112,29 @@ public class IntDoubleList {
         }
         return stringBuilder.toString();
     }
+
+    public boolean isEqual(IntDoubleList other){
+        if (size() != other.size()) return false;
+        IntDoubleListElement curr = head;
+        IntDoubleListElement otherCurr = other.head;
+        while (curr != tail && curr.isEqual(otherCurr)){
+            curr = curr.next;
+            otherCurr = otherCurr.next;
+        }
+        System.out.println(curr == tail && curr.isEqual(otherCurr));
+        return curr == tail && curr.isEqual(otherCurr);
+    }
+
+    public int sum(){
+        int sum = 0;
+        IntDoubleListElement curr = head;
+        if (curr == tail){
+            return curr.getInfo();
+        }
+        while (curr != tail){
+            sum += curr.getInfo();
+            curr = curr.next;
+        }
+        return sum;
+    }
 }
