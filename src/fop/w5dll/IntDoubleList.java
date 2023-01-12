@@ -105,7 +105,7 @@ public class IntDoubleList {
                 stringBuilder.append(current.getInfo());
             }
             if (current.next != null){
-                stringBuilder.append(current.getInfo()).append(", ");
+                stringBuilder.append(current.getInfo()).append(",");
                 current = current.next;
             }
             else current = null;
