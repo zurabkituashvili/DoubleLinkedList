@@ -123,7 +123,7 @@ public class IntDoubleList {
         if (size() != other.size()) return false;
         IntDoubleListElement curr = head;
         IntDoubleListElement otherCurr = other.head;
-        while (curr.next == null && curr.isEqual(otherCurr)){
+        while (curr.next != null && curr.isEqual(otherCurr)){
             curr = curr.next;
             otherCurr = otherCurr.next;
         }
