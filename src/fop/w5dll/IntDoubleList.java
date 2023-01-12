@@ -135,7 +135,13 @@ public class IntDoubleList {
     }
 
     public IntDoubleList copy(){
-        return new IntDoubleList();
+        IntDoubleList copy = new IntDoubleList();
+        IntDoubleListElement curr = head;
+        for (int i = 0; i < size(); i++){
+            copy.append(curr.getInfo());
+            curr = curr.next;
+        }
+        return copy;
     }
 
     public IntDoubleListElement[] search(int intValue){
