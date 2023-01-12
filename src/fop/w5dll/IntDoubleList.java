@@ -137,4 +137,12 @@ public class IntDoubleList {
         }
         return sum;
     }
+
+    public IntDoubleList copy(){
+        return new IntDoubleList();
+    }
+
+    public IntDoubleListElement[] search(int intValue){
+        return new IntDoubleListElement[]{};
+    }
 }
