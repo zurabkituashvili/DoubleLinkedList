@@ -117,15 +117,11 @@ public class IntDoubleList {
         if (size() != other.size()) return false;
         IntDoubleListElement curr = head;
         IntDoubleListElement otherCurr = other.head;
-        if (curr != null) {
-            while (curr != tail && curr.isEqual(otherCurr)) {
-                curr = curr.next;
-                otherCurr = otherCurr.next;
-            }
+        while (curr != tail && curr.isEqual(otherCurr)){
+            curr = curr.next;
+            otherCurr = otherCurr.next;
         }
-        if (curr != tail) return false;
-        assert curr != null;
-        return curr.isEqual(otherCurr);
+        return curr != null && curr == tail && curr.isEqual(otherCurr);
     }
 
     public int sum(){
