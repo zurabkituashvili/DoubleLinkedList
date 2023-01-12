@@ -124,7 +124,7 @@ public class IntDoubleList {
             curr = curr.next;
             otherCurr = otherCurr.next;
         }
-        return curr != null && curr == tail && curr.isEqual(otherCurr);
+        return curr == tail && curr.isEqual(otherCurr);
     }
 
     public int sum(){
