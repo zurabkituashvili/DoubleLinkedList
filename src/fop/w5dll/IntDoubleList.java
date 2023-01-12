@@ -117,6 +117,9 @@ public class IntDoubleList {
     }
 
     public boolean isEqual(IntDoubleList other){
+        if (other == null){
+            return false;
+        }
         if (size() != other.size()) return false;
         IntDoubleListElement curr = head;
         IntDoubleListElement otherCurr = other.head;
