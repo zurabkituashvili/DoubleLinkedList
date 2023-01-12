@@ -127,15 +127,10 @@ public class IntDoubleList {
     public int sum(){
         int sum = 0;
         IntDoubleListElement curr = head;
-        if (curr != null) {
-            if (curr == tail) {
-                return curr.getInfo();
-            }
-            while (curr != tail) {
+        while (curr != null) {
                 sum += curr.getInfo();
                 curr = curr.next;
             }
-        }
         return sum;
     }
 
