@@ -157,6 +157,6 @@ public class IntDoubleList {
             }
             else curr = curr.next;
         }
-        return (IntDoubleListElement[]) Arrays.stream(list).filter(Objects::nonNull).toArray();
+        return list;
     }
 }
