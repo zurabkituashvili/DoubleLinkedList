@@ -123,11 +123,14 @@ public class IntDoubleList {
         if (size() != other.size()) return false;
         IntDoubleListElement curr = head;
         IntDoubleListElement otherCurr = other.head;
-        while (curr.next != null && curr.isEqual(otherCurr)){
+        while (curr != null){
+            if (!curr.isEqual(otherCurr)) {
+                return false;
+            }
             curr = curr.next;
             otherCurr = otherCurr.next;
         }
-        return curr == tail && curr.isEqual(otherCurr);
+        return true;
     }
 
     public int sum(){
