@@ -1,5 +1,8 @@
 package fop.w5dll;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class IntDoubleList {
     private IntDoubleListElement head, tail;
 
@@ -145,6 +148,15 @@ public class IntDoubleList {
     }
 
     public IntDoubleListElement[] search(int intValue){
-        return new IntDoubleListElement[]{};
+        IntDoubleListElement[] list = new IntDoubleListElement[size()];
+        IntDoubleListElement curr = head;
+        for (int i = 0; i < size(); i++){
+            if (curr.getInfo() == intValue){
+                list[i] = curr;
+                curr = curr.next;
+            }
+            else curr = curr.next;
+        }
+        return (IntDoubleListElement[]) Arrays.stream(list).filter(Objects::nonNull).toArray();
     }
 }
